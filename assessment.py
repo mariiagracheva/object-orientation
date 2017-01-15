@@ -33,6 +33,8 @@ Part 1: Discussion
    Instance attribute does not have to be the same for all instances from that class.
    But it is possible to happen that the instance attribute is the same for some instances.
    Class attribute is always the same for all instances from this class.
+   Class attribute - wheels for cars (all cars have wheels)
+   Instance attribute - sunroof for cars (not all cars have sunroof)
 
 
 """
@@ -40,6 +42,8 @@ Part 1: Discussion
 
 # Parts 2 through 5:
 # Create your classes and class methods
+
+# Create Student class and Question class. 
 class Student(object):
     
     def __init__(self, first_name, last_name, address):
@@ -98,9 +102,10 @@ def take_test(exam, student):
     student.score = exam.administer()
     return student.score
 
-def example():
-    exam = Exam('exam')
 
+def example():
+
+    exam = Exam('exam')
     for i in range(3):
         exam.add_question('Can you tell me what is i*2?', i*2)
 
